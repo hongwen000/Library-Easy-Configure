@@ -1,16 +1,15 @@
 @echo off
-start C:\Windows\System32\cmd.exe\nature.theme
-copy /Y hosts C:\Windows\System32\drivers\etc\hosts
-regedit /s ◊÷ÃÂ∆Ωª¨.reg
+copy /Y %~dp0hosts C:\Windows\System32\drivers\etc\hosts
+regedit /s %~dp0Â≠ó‰ΩìÂπ≥Êªë.reg
 powershell -Command "& { set-executionpolicy remotesigned }"
-powershell -file ◊÷ÃÂ∆Ωª¨.ps1
+powershell -file %~dp0Â≠ó‰ΩìÂπ≥Êªë.ps1
 copy Chrome.7z C:\Users\Administrator\AppData\Local\Chrome.7z
 %~dp07z\7za.exe x C:\Users\Administrator\AppData\Local\Chrome.7z -oC:\Users\Administrator\AppData\Local
-regedit /s ‰Ø¿¿∆˜.reg
+regedit /s ÊµèËßàÂô®.reg
 start C:\Users\Administrator\AppData\Local\Chrome\Chrome.exe
 copy "Google Chrome.lnk" "C:\Users\Administrator\Desktop\Google Chrome.lnk"
 copy Ditto.zip C:\Users\Administrator\AppData\Local\Ditto.zip
 %~dp07z\7za.exe x C:\Users\Administrator\AppData\Local\Ditto.zip -oC:\Users\Administrator\AppData\Local
 start C:\Users\Administrator\AppData\Local\Ditto\Ditto.exe
-
-
+start %~dp0ahk\remapkey.exe
+start %~dp0npp.7.5.1.Installer.exe /S
